@@ -87,7 +87,7 @@ EvalReader:
 
 TestReader:
   inputs_def:
-    image_shape: [3, 608, 608]
+    image_shape: [3, 416, 416]
     fields: ['image', 'im_size', 'im_id']
   dataset:
     !ImageFolder
@@ -97,7 +97,7 @@ TestReader:
     - !DecodeImage
       to_rgb: True
     - !ResizeImage
-      target_size: 608
+      target_size: 416
       interp: 2
     - !NormalizeImage
       mean: [0.485, 0.456, 0.406]
