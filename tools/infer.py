@@ -44,6 +44,10 @@ FORMAT = '%(asctime)s-%(levelname)s: %(message)s'
 logging.basicConfig(level=logging.INFO, format=FORMAT)
 logger = logging.getLogger(__name__)
 
+# using static graph for develop branch
+#import paddle
+#paddle.enable_static()
+
 
 def get_save_image_name(output_dir, image_path):
     """

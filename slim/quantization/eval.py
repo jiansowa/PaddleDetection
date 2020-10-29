@@ -42,6 +42,8 @@ logger = logging.getLogger(__name__)
 # import paddleslim
 from paddleslim.quant import quant_aware, convert
 
+#import paddle
+#paddle.enable_static()
 
 def main():
     """

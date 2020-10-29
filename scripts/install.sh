@@ -6,6 +6,7 @@
 
 # gpu
 #python -m pip install paddlepaddle-gpu==1.8.4.post107 -i https://mirror.baidu.com/pypi/simple
+#pip install pip install ~/paddle_pkg/paddlepaddle_gpu-1.8.5-cp36-cp36m-linux_x86_64.whl
 # cpu
 #python -m pip install paddlepaddle==1.8.4 -i https://mirror.baidu.com/pypi/simple
 

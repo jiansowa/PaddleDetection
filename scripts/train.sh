@@ -1,3 +1,4 @@
+# refer: https://github.com/PaddlePaddle/PaddleDetection/blob/release/0.4/docs/tutorials/GETTING_STARTED_cn.md
 
 # show command line options
 python tools/train.py --help

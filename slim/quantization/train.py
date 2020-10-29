@@ -44,6 +44,9 @@ FORMAT = '%(asctime)s-%(levelname)s: %(message)s'
 logging.basicConfig(level=logging.INFO, format=FORMAT)
 logger = logging.getLogger(__name__)
 
+# required by develop branch
+#import paddle
+#paddle.enable_static()
 
 def save_checkpoint(exe, prog, path, train_prog):
     if os.path.isdir(path):
@@ -169,7 +172,7 @@ def main():
     if FLAGS.not_quant_pattern:
         not_quant_pattern = FLAGS.not_quant_pattern
     config = {
-        'weight_quantize_type': 'channel_wise_abs_max',
+        'weight_quantize_type': 'abs_max',
         'activation_quantize_type': 'moving_average_abs_max',
         'quantize_op_types': ['depthwise_conv2d', 'mul', 'conv2d'],
         'not_quant_pattern': not_quant_pattern
